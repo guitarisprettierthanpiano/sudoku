@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "jsx": "react",
+        "watch": true,
+        "target": "es5",
+        "lib": [
+            "es6",
+            "dom"
+        ],
+        "plugins": [
+            {
+                "name": "typescript-plugin-css-modules"
+            }
+        ]
+    }
+}
