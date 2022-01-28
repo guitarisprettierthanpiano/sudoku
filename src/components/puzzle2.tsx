@@ -104,7 +104,7 @@ const Puzzle2: React.FC = () => {
 
         <NavLink
             activeClassName='active'
-            to='/p1'>
+            to='/'>
             <span className='arrows'>&#11013;</span>
         </NavLink>
 

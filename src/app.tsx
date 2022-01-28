@@ -23,10 +23,9 @@ const App: React.FC = () => {
     }, [])
 
     return(
-        <>
         <HashRouter>
             <Switch>
-                <Route exact path='/p1'
+                <Route exact path='/'
                 component={Puzzle1}/>
 
                 <Route path='/p2'
@@ -44,10 +43,6 @@ const App: React.FC = () => {
             
             <Rightside/>
         </HashRouter>
-
-        
-
-        </> 
     )
 }
 
