@@ -1,29 +1,51 @@
 import * as React from 'react';
+import { useEffect } from 'react';
+import { Switch, HashRouter, Route } from 'react-router-dom';
 
-import Main from './components/main'
+import Puzzle1 from './components/puzzle1'
+import Puzzle2 from './components/puzzle2'
+import Puzzle3 from './components/puzzle3'
+import Puzzle4 from './components/puzzle4'
+import Puzzle5 from './components/puzzle5';
+
+import Rightside from './components/rightside';
 
 const App: React.FC = () => {
 
-    //clicking the reset button will reset the cell values to 0 and make them transparent again
-    const ResetPuzzle = () => {
-        const puzzle_array: NodeListOf<HTMLElement> = document.querySelectorAll('.hoverable')
 
-        for (let i = 0; i < puzzle_array.length; i++){
-            puzzle_array[i].style.color = 'rgba(0,0,0,0)';
-            puzzle_array[i].innerHTML = '0';
-        }
-    }
+    useEffect(() => {
 
+        //removing right click because it is annoying when accidently clicking it instead of left click.
+        addEventListener("contextmenu", function (e) {
+            e.preventDefault();
+        }, false);
+        
+    }, [])
 
     return(
         <>
-        <h1>Sudoku</h1>
-        
-        <Main/>
+        <HashRouter>
+            <Switch>
+                <Route exact path='/p1'
+                component={Puzzle1}/>
 
-        <div className='right-side'>
-            <button onClick = {() => ResetPuzzle()}>reset puzzle</button>
-        </div>
+                <Route path='/p2'
+                component={Puzzle2}/>
+
+                <Route path='/p3'
+                component={Puzzle3}/>
+
+                <Route path='/p4'
+                component={Puzzle4}/>
+
+                <Route path='/p5'
+                component={Puzzle5}/>
+            </Switch>
+            
+            <Rightside/>
+        </HashRouter>
+
+        
 
         </> 
     )
