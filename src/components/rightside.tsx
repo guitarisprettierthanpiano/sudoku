@@ -14,14 +14,12 @@ const Rightside: React.FC = () =>{
     }
 
     return(
-    <>
-
+        
     <div className='right-side'>
         <button onClick = {() => ResetPuzzle()}>Reset</button>
         <a href='https://sudoku.com/how-to-play/sudoku-rules-for-complete-beginners/' target='_blank'>How To Play</a>
     </div>
 
-    </>
     )
 }
 
