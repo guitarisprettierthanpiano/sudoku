@@ -108,7 +108,7 @@ const Puzzle3: React.FC = () => {
             <span className='arrows'>&#11013;</span>
         </NavLink>
 
-        <h1><a href='../images/sol3.png' target='_blank' title='Solution'>Puzzle #3</a></h1>
+        <h1><a href='./././images/sol3.png' target='_blank' title='Solution'>Puzzle #3</a></h1>
         
         <NavLink
             activeClassName='active'
