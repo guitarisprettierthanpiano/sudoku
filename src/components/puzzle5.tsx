@@ -175,7 +175,7 @@ const Puzzle5: React.FC = () => {
                 <span>9</span>
                 <span>5</span>
                 <span>3</span>
-                <span>5</span>
+                <span>7</span>
                 <span className='hoverable'
                 style={{ color: 'rgba(0,0,0,0)' }}
                 onClick={ev => Increment(ev.target)}
