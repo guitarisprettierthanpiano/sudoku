@@ -185,7 +185,7 @@ span{
 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 3fr 1fr;
+    grid-template-rows: 3fr 1fr; 
 
     background-color: rgb(10, 10, 10);
 }
@@ -210,8 +210,8 @@ span{
 
 @media screen and (max-width: 1440px){
     span{
-        font-size: 32px;
-        line-height: 1.7;
+        font-size: 34px;
+        line-height: 1.6;
     }
 }
 
