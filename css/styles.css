@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
 
 * {
-    color: rgb(221, 221, 221);
+    color: rgb(218, 231, 242);
+    border: none;
 
     line-height: 1.5;
     padding: 0px;
@@ -23,7 +24,7 @@
     grid-template-rows: 1fr;
     grid-template-columns: auto auto;
 
-    background-color: rgb(17, 17, 17);
+    background-color: #03191e;
 }
 
 /* main */
@@ -56,7 +57,7 @@
     grid-template-columns: 4fr 3fr 4fr;
     grid-template-rows: 1fr;
 
-    background-color: rgb(10, 10, 10);
+    background-color: #03191e;;
 }
 .nav *{
     align-self: center;
@@ -65,7 +66,7 @@
     text-align: center;
 
     text-decoration: none;
-    background-color: rgb(10, 10, 10);
+    background-color: #03191e;;
 
     border: none;
 }
@@ -74,9 +75,16 @@
     cursor: pointer;
 
     font-size: 54px;
+
+    align-self: end;
+    text-align: end;
 }
 .nav span{
     font-size: 60px;
+}
+.nav *:hover{
+    color: rgb(56, 174, 244)
+    
 }
 
 
@@ -95,9 +103,10 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
 
-    outline: 3px solid rgb(150, 150, 150);
+    outline: 3px solid rgb(132, 158, 162);
     z-index: 2;
 
+    background-color: #03191e;
 }
 
 .sudoku-subboard{
@@ -109,30 +118,31 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
 
-    outline: 3px solid rgb(150, 150, 150);
+    outline: 3px solid rgb(132, 158, 162);
 
     border-radius: 4px;
 }
 span{
     font-family: 'Roboto Mono', monospace;
 
-    height: 100%;
+    height:100%;
     width: 100%;
 
     line-height: normal;
 
-    font-size: 36px;
-    font-weight: 600;
+    font-size: 44px;
+    font-weight: 500;
 
     text-align: center;
     text-justify: center;
-
     align-self: center;
     justify-self: center;
 
-    border: 1px solid rgb(74, 74, 74);
+    color: #a9c8dc;
 
-    background-color: rgb(27, 27, 27);
+    border: 1px solid rgb(72, 96, 95);
+
+    background-color: rgb(6, 48, 58);
 }
 .hoverable{
     cursor: pointer;
@@ -141,7 +151,7 @@ span{
     overflow: scroll; */
 }
 .hoverable:active{
-    background-color: rgb(29, 29, 29);
+    background-color: #062a32;
 }
 
 /* winning sudoku */
@@ -174,7 +184,7 @@ span{
     to {
       text-shadow: 0 0 10px #ff0000, 0 0 4px #ff0000;
     }
-  }
+}
 
 /* right part */
 .right-side{
@@ -187,35 +197,40 @@ span{
 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 3fr 1fr; 
+    grid-template-rows: 4fr 2fr; 
 
-    background-color: rgb(10, 10, 10);
+    background-color: #03191e;;
 }
 .right-side button{
-    background-color: rgb(10, 10, 10);
+    outline: 2px solid rgb(132, 158, 162);
+    background-color: rgb(6, 48, 58);
 
-    width: 10vw;
-    height: 40px;
+    width: 50%;
+    max-width: 54px;
+    height: 24px;
     font-size: 18px;
 
     align-self: center;
     justify-self: center;
 
+    text-align: center;
+    text-justify: center;
+
     cursor: pointer;
+}
+.right-side button:hover, .right-side a:hover{
+    color: rgb(56, 174, 244)
 }
 .right-side a{
     text-align: center;
     font-size: 18px;
+    height: 24px;
 }
 
 
-
-@media screen and (max-width: 1440px){
-    span{
-        font-size: 30px;
-    }
+img{
+    filter: contrast(50%);
 }
-
 @media screen and (max-width: 1080px){
     .nav h1{
         font-size: 40px;
@@ -223,10 +238,11 @@ span{
     .nav span{
         font-size: 40px;
     }
+
     span{
         font-size: 30px;
+        font-weight: 600;
     }
-
     .sudoku-board{
         width: 400px;
         height: 400px;
@@ -241,46 +257,58 @@ span{
         font-size: 30px;
     }
     span{
-        font-size: 24px;
+        font-size: 30px;
+        font-weight: 500;
+    }
+
+    .right-side button{
+        height: 16px;
+        font-size: 12px;
+        width: 40px;
     }
 
     .right-side button, .right-side a{
-        font-size: 14px;
-
-        height: auto;
+        height: 16px;
+        font-size: 12px;
     }
 }
 
 @media screen and (max-width: 550px){
-    .nav h1{
-        font-size: 24px;
+    #root-container{
+        grid-template-rows: 1fr auto;
+        grid-template-columns: 1fr;
     }
-    .nav span{
-        font-size: 24px;
+    .main-container{
+        width: 100%;
     }
-    span{
-        font-size: 20px;
-    }
-
-    .sudoku-board{
-        width: 350px;
-        height: 350px;
-    }
-}
-
-@media screen and (max-width: 550px){
     .nav h1{
         font-size: 22px;
     }
     .nav span{
         font-size: 22px;
     }
+
     span{
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .sudoku-board{
         width: 250px;
         height: 250px;
+    }
+
+    .right-side{
+        grid-row: 2;
+        grid-column: 1;
+        width: 100%;
+    }
+    .right-side *{
+        width: 50%;
+        margin: 2px;
+        padding: 0px;
+        background-color: #00000000;
+    }
+    .right-side a{
+        display: none;
     }
 }

@@ -10,7 +10,7 @@ const Puzzle1: React.FC = () => {
         ev.style.display = 'inline'
         const current_number:number = Math.round(ev.innerHTML)
 
-        ev.style.color = 'rgba(255,0,0,1)'
+        ev.style.color = 'rgb(56, 174, 244)'
         ev.innerHTML = ((current_number + 1).toString())
 
 
