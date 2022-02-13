@@ -7,7 +7,7 @@ const Puzzle1: React.FC = () => {
 
     //this will cycle the clicked number between 0 and 9. if 0, it is hidden
     const Increment = (ev) => {
-        ev.style.display = 'inline'
+        ev.style.display = 'flex'
         const current_number:number = Math.round(ev.innerHTML)
 
         ev.style.color = 'rgb(56, 174, 244)'
