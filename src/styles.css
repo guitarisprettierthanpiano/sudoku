@@ -25,6 +25,11 @@
 
     background-color: #03191e;
 }
+.loading{
+    height: fit-content;
+    width: fit-content;
+    background-color: #03191e;
+}
 
 /* main */
 .main-container{
