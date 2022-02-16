@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { NavLink } from 'react-router-dom';
 
-
+import Solution from '../images/sol5.webp';
 //this is puzzle #5 from https://www.printablesudoku99.com/pdf/EasySudoku001.pdf
 const Puzzle5: React.FC = () => {
 
@@ -107,7 +107,7 @@ const Puzzle5: React.FC = () => {
             <span className='arrows'>&#11013;</span>
         </NavLink>
 
-        <h1><a href='./././images/sol5.png' target='_blank' title='Solution'>Puzzle #5</a></h1>
+        <h1><a href={Solution} target='_blank' title='Solution'>Puzzle #5</a></h1>
         
         <NavLink
             activeClassName='active'

@@ -1,12 +1,13 @@
 const path = require('path');
-// const Dotenv = require('dotenv-webpack');
 
 module.exports = {
     entry: "./src/index.tsx",
+    mode: "production",
     devtool: "inline-source-map",
     output: {
         filename: "bundle.js",
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'dist'),
+        clean: true,
     },
     module: {
         rules: [
@@ -18,12 +19,17 @@ module.exports = {
             {        
                 test: /\.css$/,        
                 use: ["style-loader", "css-loader"]      
-            },            
+            },       
+            {
+                test: /\.(webp)$/,
+                loader: 'file-loader',
+                options: {
+                  name: '[name].[ext]',
+            },}
         ]
     },
     watch: true,
     resolve: {
-        extensions: [".ts", ".tsx", ".js"]
+        extensions: [".tsx", ".ts", ".js"]
     },
-    // plugins: [new Dotenv()],
 }
