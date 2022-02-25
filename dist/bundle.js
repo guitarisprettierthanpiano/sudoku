@@ -1,6 +1,18 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ 674:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "lol.webp");
+
+/***/ }),
+
 /***/ 685:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -3633,6 +3645,7 @@ const React = __importStar(__webpack_require__(294));
 const react_router_dom_1 = __webpack_require__(427);
 const sol1_webp_1 = __importDefault(__webpack_require__(685));
 //this is puzzle #1 from https://www.printablesudoku99.com/pdf/EasySudoku001.pdf
+const lol_webp_1 = __importDefault(__webpack_require__(674));
 const Puzzle1 = () => {
     //this will cycle the clicked number between 0 and 9. if 0, it is hidden
     const Increment = (ev) => {
@@ -3804,7 +3817,7 @@ const Puzzle1 = () => {
                 React.createElement("span", null, "5"),
                 React.createElement("span", null, "3"),
                 React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'i5' }, "0"))),
-        React.createElement("div", { className: 'winning-container', style: { display: 'none' } },
+        React.createElement("div", { className: 'winning-container', style: { backgroundImage: `url(${lol_webp_1.default})` } },
             React.createElement("div", null),
             React.createElement("h1", null, "You Won!"),
             React.createElement(react_router_dom_1.NavLink, { activeClassName: 'active', to: '/p2' },
@@ -3848,6 +3861,7 @@ const React = __importStar(__webpack_require__(294));
 const react_router_dom_1 = __webpack_require__(427);
 const sol2_webp_1 = __importDefault(__webpack_require__(445));
 //this is puzzle #2 from https://www.printablesudoku99.com/pdf/EasySudoku001.pdf
+const lol_webp_1 = __importDefault(__webpack_require__(674));
 const Puzzle2 = () => {
     //this will cycle the clicked number between 0 and 9. if 0, it is hidden
     const Increment = (ev) => {
@@ -4019,7 +4033,7 @@ const Puzzle2 = () => {
                 React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'i4' }, "0"),
                 React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'i5' }, "0"),
                 React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'i6' }, "0"))),
-        React.createElement("div", { className: 'winning-container', style: { display: 'none' } },
+        React.createElement("div", { className: 'winning-container', style: { backgroundImage: `url(${lol_webp_1.default})` } },
             React.createElement("div", null),
             React.createElement("h1", null, "You Won!"),
             React.createElement(react_router_dom_1.NavLink, { activeClassName: 'active', to: '/p3' },
@@ -4063,6 +4077,7 @@ const React = __importStar(__webpack_require__(294));
 const react_router_dom_1 = __webpack_require__(427);
 const sol3_webp_1 = __importDefault(__webpack_require__(460));
 //this is puzzle #3 from https://www.printablesudoku99.com/pdf/EasySudoku001.pdf
+const lol_webp_1 = __importDefault(__webpack_require__(674));
 const Puzzle3 = () => {
     //this will cycle the clicked number between 0 and 9. if 0, it is hidden
     const Increment = (ev) => {
@@ -4234,7 +4249,7 @@ const Puzzle3 = () => {
                 React.createElement("span", null, "6"),
                 React.createElement("span", null, "1"),
                 React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'i5' }, "0"))),
-        React.createElement("div", { className: 'winning-container', style: { display: 'none' } },
+        React.createElement("div", { className: 'winning-container', style: { backgroundImage: `url(${lol_webp_1.default})` } },
             React.createElement("div", null),
             React.createElement("h1", null, "You Won!"),
             React.createElement(react_router_dom_1.NavLink, { activeClassName: 'active', to: '/p4' },
@@ -4278,6 +4293,7 @@ const React = __importStar(__webpack_require__(294));
 const react_router_dom_1 = __webpack_require__(427);
 const sol4_webp_1 = __importDefault(__webpack_require__(767));
 //this is puzzle #4 from https://www.printablesudoku99.com/pdf/EasySudoku001.pdf
+const lol_webp_1 = __importDefault(__webpack_require__(674));
 const Puzzle4 = () => {
     //this will cycle the clicked number between 0 and 9. if 0, it is hidden
     const Increment = (ev) => {
@@ -4449,7 +4465,7 @@ const Puzzle4 = () => {
                 React.createElement("span", null, "5"),
                 React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'i4' }, "0"),
                 React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'i5' }, "0"))),
-        React.createElement("div", { className: 'winning-container', style: { display: 'none' } },
+        React.createElement("div", { className: 'winning-container', style: { backgroundImage: `url(${lol_webp_1.default})` } },
             React.createElement("div", null),
             React.createElement("h1", null, "You Won!"),
             React.createElement(react_router_dom_1.NavLink, { activeClassName: 'active', to: '/p5' },
@@ -4493,6 +4509,7 @@ const React = __importStar(__webpack_require__(294));
 const react_router_dom_1 = __webpack_require__(427);
 const sol5_webp_1 = __importDefault(__webpack_require__(522));
 //this is puzzle #5 from https://www.printablesudoku99.com/pdf/EasySudoku001.pdf
+const lol_webp_1 = __importDefault(__webpack_require__(674));
 const Puzzle5 = () => {
     //this will cycle the clicked number between 0 and 9. if 0, it is hidden
     const Increment = (ev) => {
@@ -4663,7 +4680,7 @@ const Puzzle5 = () => {
                 React.createElement("span", null, "2"),
                 React.createElement("span", null, "4"),
                 React.createElement("span", null, "9"))),
-        React.createElement("div", { className: 'winning-container', style: { display: 'none' } },
+        React.createElement("div", { className: 'winning-container', style: { backgroundImage: `url(${lol_webp_1.default})` } },
             React.createElement("div", null),
             React.createElement("h1", null, "You Won!"),
             React.createElement(react_router_dom_1.NavLink, { activeClassName: 'active', to: '/' },

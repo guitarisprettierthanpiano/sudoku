@@ -3,6 +3,8 @@ import { NavLink } from 'react-router-dom';
 
 import Solution from '../images/sol5.webp';
 //this is puzzle #5 from https://www.printablesudoku99.com/pdf/EasySudoku001.pdf
+import WinningImage from '../images/lol.webp'
+
 const Puzzle5: React.FC = () => {
 
     //this will cycle the clicked number between 0 and 9. if 0, it is hidden
@@ -339,7 +341,7 @@ const Puzzle5: React.FC = () => {
             </div>
         </div>
 
-        <div className='winning-container' style={{display:'none'}}>
+        <div className='winning-container' style={{backgroundImage:`url(${WinningImage})`}}>
             <div></div>
             <h1>You Won!</h1>
             <NavLink
