@@ -1,18 +1,17 @@
-import * as React from 'react';
-import { useEffect } from 'react';
+import React from 'react';
 import { Switch, HashRouter, Route } from 'react-router-dom';
 
-const Puzzle1 = React.lazy(() => import("./components/puzzle1"));
-const Puzzle2 = React.lazy(() => import("./components/puzzle2"));
-const Puzzle3 = React.lazy(() => import("./components/puzzle3"));
-const Puzzle4 = React.lazy(() => import("./components/puzzle4"));
-const Puzzle5 = React.lazy(() => import("./components/puzzle5"));
+const Puzzle1: React.LazyExoticComponent<React.FC<{}>> = React.lazy(() => import("./components/puzzle1"));
+const Puzzle2: React.LazyExoticComponent<React.FC<{}>> = React.lazy(() => import("./components/puzzle2"));
+const Puzzle3: React.LazyExoticComponent<React.FC<{}>> = React.lazy(() => import("./components/puzzle3"));
+const Puzzle4: React.LazyExoticComponent<React.FC<{}>> = React.lazy(() => import("./components/puzzle4"));
+const Puzzle5: React.LazyExoticComponent<React.FC<{}>> = React.lazy(() => import("./components/puzzle5"));
 
 import Rightside from './components/rightside';
 
 const App: React.FC = () => {
 
-    useEffect(() => {
+    React.useEffect(() => {
         //removing right click because it is annoying when accidently clicking it instead of left click.
         addEventListener("contextmenu", function (e) {
             e.preventDefault();

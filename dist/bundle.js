@@ -3582,31 +3582,30 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const React = __importStar(__webpack_require__(294));
-const react_1 = __webpack_require__(294);
+const react_1 = __importDefault(__webpack_require__(294));
 const react_router_dom_1 = __webpack_require__(427);
-const Puzzle1 = React.lazy(() => Promise.resolve().then(() => __importStar(__webpack_require__(852))));
-const Puzzle2 = React.lazy(() => Promise.resolve().then(() => __importStar(__webpack_require__(804))));
-const Puzzle3 = React.lazy(() => Promise.resolve().then(() => __importStar(__webpack_require__(984))));
-const Puzzle4 = React.lazy(() => Promise.resolve().then(() => __importStar(__webpack_require__(505))));
-const Puzzle5 = React.lazy(() => Promise.resolve().then(() => __importStar(__webpack_require__(778))));
+const Puzzle1 = react_1.default.lazy(() => Promise.resolve().then(() => __importStar(__webpack_require__(852))));
+const Puzzle2 = react_1.default.lazy(() => Promise.resolve().then(() => __importStar(__webpack_require__(804))));
+const Puzzle3 = react_1.default.lazy(() => Promise.resolve().then(() => __importStar(__webpack_require__(984))));
+const Puzzle4 = react_1.default.lazy(() => Promise.resolve().then(() => __importStar(__webpack_require__(505))));
+const Puzzle5 = react_1.default.lazy(() => Promise.resolve().then(() => __importStar(__webpack_require__(778))));
 const rightside_1 = __importDefault(__webpack_require__(900));
 const App = () => {
-    react_1.useEffect(() => {
+    react_1.default.useEffect(() => {
         //removing right click because it is annoying when accidently clicking it instead of left click.
         addEventListener("contextmenu", function (e) {
             e.preventDefault();
         }, false);
     }, []);
-    return (React.createElement(react_router_dom_1.HashRouter, null,
-        React.createElement(react_router_dom_1.Switch, null,
-            React.createElement(React.Suspense, { fallback: React.createElement("p", { className: 'loading' }, "Loading page...") },
-                React.createElement(react_router_dom_1.Route, { exact: true, path: '/', component: Puzzle1 }),
-                React.createElement(react_router_dom_1.Route, { path: '/p2', component: Puzzle2 }),
-                React.createElement(react_router_dom_1.Route, { path: '/p3', component: Puzzle3 }),
-                React.createElement(react_router_dom_1.Route, { path: '/p4', component: Puzzle4 }),
-                React.createElement(react_router_dom_1.Route, { path: '/p5', component: Puzzle5 }))),
-        React.createElement(rightside_1.default, null)));
+    return (react_1.default.createElement(react_router_dom_1.HashRouter, null,
+        react_1.default.createElement(react_router_dom_1.Switch, null,
+            react_1.default.createElement(react_1.default.Suspense, { fallback: react_1.default.createElement("p", { className: 'loading' }, "Loading page...") },
+                react_1.default.createElement(react_router_dom_1.Route, { exact: true, path: '/', component: Puzzle1 }),
+                react_1.default.createElement(react_router_dom_1.Route, { path: '/p2', component: Puzzle2 }),
+                react_1.default.createElement(react_router_dom_1.Route, { path: '/p3', component: Puzzle3 }),
+                react_1.default.createElement(react_router_dom_1.Route, { path: '/p4', component: Puzzle4 }),
+                react_1.default.createElement(react_router_dom_1.Route, { path: '/p5', component: Puzzle5 }))),
+        react_1.default.createElement(rightside_1.default, null)));
 };
 exports.default = App;
 
@@ -3618,30 +3617,11 @@ exports.default = App;
 
 "use strict";
 
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const React = __importStar(__webpack_require__(294));
+const react_1 = __importDefault(__webpack_require__(294));
 const react_router_dom_1 = __webpack_require__(427);
 const sol1_webp_1 = __importDefault(__webpack_require__(685));
 //this is puzzle #1 from https://www.printablesudoku99.com/pdf/EasySudoku001.pdf
@@ -3718,111 +3698,111 @@ const Puzzle1 = () => {
             schlepper.style.display = 'grid';
         }
     };
-    return (React.createElement("div", { className: 'main-container' },
-        React.createElement("div", { className: 'nav' },
-            React.createElement(react_router_dom_1.NavLink, { activeClassName: 'active', to: '/p5' },
-                React.createElement("span", { className: 'arrows' }, "\u2B05")),
-            React.createElement("h1", null,
-                React.createElement("a", { href: sol1_webp_1.default, target: '_blank', title: 'Solution' }, "Puzzle #1")),
-            React.createElement(react_router_dom_1.NavLink, { activeClassName: 'active', to: '/p2' },
-                React.createElement("span", { className: 'arrows' }, "\u27A1"))),
-        React.createElement("div", { className: 'sudoku-board' },
-            React.createElement("div", { className: 'sudoku-subboard' },
-                React.createElement("span", null, "1"),
-                React.createElement("span", null, "4"),
-                React.createElement("span", null, "2"),
-                React.createElement("span", null, "7"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'a1' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'a2' }, "0"),
-                React.createElement("span", null, "8"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'a3' }, "0"),
-                React.createElement("span", null, "5")),
-            React.createElement("div", { className: 'sudoku-subboard' },
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'b1' }, "0"),
-                React.createElement("span", null, "9"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'b2' }, "0"),
-                React.createElement("span", null, "4"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'b3' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'b4' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'b5' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'b6' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'b7' }, "0")),
-            React.createElement("div", { className: 'sudoku-subboard' },
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'c1' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'c2' }, "0"),
-                React.createElement("span", null, "5"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'c3' }, "0"),
-                React.createElement("span", null, "8"),
-                React.createElement("span", null, "9"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'c4' }, "0"),
-                React.createElement("span", null, "2"),
-                React.createElement("span", null, "4")),
-            React.createElement("div", { className: 'sudoku-subboard' },
-                React.createElement("span", null, "2"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'd1' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'd2' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'd3' }, "0"),
-                React.createElement("span", null, "3"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'd4' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'd5' }, "0"),
-                React.createElement("span", null, "8"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'd6' }, "0")),
-            React.createElement("div", { className: 'sudoku-subboard' },
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'e1' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'e2' }, "0"),
-                React.createElement("span", null, "4"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'e3' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'e4' }, "0"),
-                React.createElement("span", null, "1"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'e5' }, "0"),
-                React.createElement("span", null, "7"),
-                React.createElement("span", null, "2")),
-            React.createElement("div", { className: 'sudoku-subboard' },
-                React.createElement("span", null, "8"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'f1' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'f2' }, "0"),
-                React.createElement("span", null, "2"),
-                React.createElement("span", null, "6"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'f3' }, "0"),
-                React.createElement("span", null, "9"),
-                React.createElement("span", null, "4"),
-                React.createElement("span", null, "1")),
-            React.createElement("div", { className: 'sudoku-subboard' },
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'g1' }, "0"),
-                React.createElement("span", null, "5"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'g2' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'g3' }, "0"),
-                React.createElement("span", null, "2"),
-                React.createElement("span", null, "8"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'g4' }, "0"),
-                React.createElement("span", null, "7"),
-                React.createElement("span", null, "9")),
-            React.createElement("div", { className: 'sudoku-subboard' },
-                React.createElement("span", null, "2"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'h1' }, "0"),
-                React.createElement("span", null, "6"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'h2' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'h3' }, "0"),
-                React.createElement("span", null, "9"),
-                React.createElement("span", null, "1"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'h4' }, "0"),
-                React.createElement("span", null, "8")),
-            React.createElement("div", { className: 'sudoku-subboard' },
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'i1' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'i2' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'i3' }, "0"),
-                React.createElement("span", null, "4"),
-                React.createElement("span", null, "1"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'i4' }, "0"),
-                React.createElement("span", null, "5"),
-                React.createElement("span", null, "3"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'i5' }, "0"))),
-        React.createElement("div", { className: 'winning-container', style: { backgroundImage: `url(${lol_webp_1.default})` } },
-            React.createElement("div", null),
-            React.createElement("h1", null, "You Won!"),
-            React.createElement(react_router_dom_1.NavLink, { activeClassName: 'active', to: '/p2' },
-                React.createElement("h2", { className: 'arrows' }, "Play Another? \u27A1")),
-            React.createElement("div", null))));
+    return (react_1.default.createElement("div", { className: 'main-container' },
+        react_1.default.createElement("div", { className: 'nav' },
+            react_1.default.createElement(react_router_dom_1.NavLink, { activeClassName: 'active', to: '/p5' },
+                react_1.default.createElement("span", { className: 'arrows' }, "\u2B05")),
+            react_1.default.createElement("h1", null,
+                react_1.default.createElement("a", { href: sol1_webp_1.default, target: '_blank', title: 'Solution' }, "Puzzle #1")),
+            react_1.default.createElement(react_router_dom_1.NavLink, { activeClassName: 'active', to: '/p2' },
+                react_1.default.createElement("span", { className: 'arrows' }, "\u27A1"))),
+        react_1.default.createElement("div", { className: 'sudoku-board' },
+            react_1.default.createElement("div", { className: 'sudoku-subboard' },
+                react_1.default.createElement("span", null, "1"),
+                react_1.default.createElement("span", null, "4"),
+                react_1.default.createElement("span", null, "2"),
+                react_1.default.createElement("span", null, "7"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'a1' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'a2' }, "0"),
+                react_1.default.createElement("span", null, "8"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'a3' }, "0"),
+                react_1.default.createElement("span", null, "5")),
+            react_1.default.createElement("div", { className: 'sudoku-subboard' },
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'b1' }, "0"),
+                react_1.default.createElement("span", null, "9"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'b2' }, "0"),
+                react_1.default.createElement("span", null, "4"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'b3' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'b4' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'b5' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'b6' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'b7' }, "0")),
+            react_1.default.createElement("div", { className: 'sudoku-subboard' },
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'c1' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'c2' }, "0"),
+                react_1.default.createElement("span", null, "5"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'c3' }, "0"),
+                react_1.default.createElement("span", null, "8"),
+                react_1.default.createElement("span", null, "9"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'c4' }, "0"),
+                react_1.default.createElement("span", null, "2"),
+                react_1.default.createElement("span", null, "4")),
+            react_1.default.createElement("div", { className: 'sudoku-subboard' },
+                react_1.default.createElement("span", null, "2"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'd1' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'd2' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'd3' }, "0"),
+                react_1.default.createElement("span", null, "3"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'd4' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'd5' }, "0"),
+                react_1.default.createElement("span", null, "8"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'd6' }, "0")),
+            react_1.default.createElement("div", { className: 'sudoku-subboard' },
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'e1' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'e2' }, "0"),
+                react_1.default.createElement("span", null, "4"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'e3' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'e4' }, "0"),
+                react_1.default.createElement("span", null, "1"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'e5' }, "0"),
+                react_1.default.createElement("span", null, "7"),
+                react_1.default.createElement("span", null, "2")),
+            react_1.default.createElement("div", { className: 'sudoku-subboard' },
+                react_1.default.createElement("span", null, "8"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'f1' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'f2' }, "0"),
+                react_1.default.createElement("span", null, "2"),
+                react_1.default.createElement("span", null, "6"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'f3' }, "0"),
+                react_1.default.createElement("span", null, "9"),
+                react_1.default.createElement("span", null, "4"),
+                react_1.default.createElement("span", null, "1")),
+            react_1.default.createElement("div", { className: 'sudoku-subboard' },
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'g1' }, "0"),
+                react_1.default.createElement("span", null, "5"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'g2' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'g3' }, "0"),
+                react_1.default.createElement("span", null, "2"),
+                react_1.default.createElement("span", null, "8"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'g4' }, "0"),
+                react_1.default.createElement("span", null, "7"),
+                react_1.default.createElement("span", null, "9")),
+            react_1.default.createElement("div", { className: 'sudoku-subboard' },
+                react_1.default.createElement("span", null, "2"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'h1' }, "0"),
+                react_1.default.createElement("span", null, "6"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'h2' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'h3' }, "0"),
+                react_1.default.createElement("span", null, "9"),
+                react_1.default.createElement("span", null, "1"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'h4' }, "0"),
+                react_1.default.createElement("span", null, "8")),
+            react_1.default.createElement("div", { className: 'sudoku-subboard' },
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'i1' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'i2' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'i3' }, "0"),
+                react_1.default.createElement("span", null, "4"),
+                react_1.default.createElement("span", null, "1"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'i4' }, "0"),
+                react_1.default.createElement("span", null, "5"),
+                react_1.default.createElement("span", null, "3"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'i5' }, "0"))),
+        react_1.default.createElement("div", { className: 'winning-container', style: { backgroundImage: `url(${lol_webp_1.default})` } },
+            react_1.default.createElement("div", null),
+            react_1.default.createElement("h1", null, "You Won!"),
+            react_1.default.createElement(react_router_dom_1.NavLink, { activeClassName: 'active', to: '/p2' },
+                react_1.default.createElement("h2", { className: 'arrows' }, "Play Another? \u27A1")),
+            react_1.default.createElement("div", null))));
 };
 exports.default = Puzzle1;
 
@@ -3834,30 +3814,11 @@ exports.default = Puzzle1;
 
 "use strict";
 
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const React = __importStar(__webpack_require__(294));
+const react_1 = __importDefault(__webpack_require__(294));
 const react_router_dom_1 = __webpack_require__(427);
 const sol2_webp_1 = __importDefault(__webpack_require__(445));
 //this is puzzle #2 from https://www.printablesudoku99.com/pdf/EasySudoku001.pdf
@@ -3934,111 +3895,111 @@ const Puzzle2 = () => {
             schlepper.style.display = 'grid';
         }
     };
-    return (React.createElement("div", { className: 'main-container' },
-        React.createElement("div", { className: 'nav' },
-            React.createElement(react_router_dom_1.NavLink, { activeClassName: 'active', to: '/' },
-                React.createElement("span", { className: 'arrows' }, "\u2B05")),
-            React.createElement("h1", null,
-                React.createElement("a", { href: sol2_webp_1.default, target: '_blank', title: 'Solution' }, "Puzzle #2")),
-            React.createElement(react_router_dom_1.NavLink, { activeClassName: 'active', to: '/p3' },
-                React.createElement("span", { className: 'arrows' }, "\u27A1"))),
-        React.createElement("div", { className: 'sudoku-board' },
-            React.createElement("div", { className: 'sudoku-subboard' },
-                React.createElement("span", null, "1"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), onScroll: ev => Increment(ev.target), id: 'a1' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'a2' }, "0"),
-                React.createElement("span", null, "5"),
-                React.createElement("span", null, "7"),
-                React.createElement("span", null, "3"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'a3' }, "0"),
-                React.createElement("span", null, "4"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'a4' }, "0")),
-            React.createElement("div", { className: 'sudoku-subboard' },
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'b1' }, "0"),
-                React.createElement("span", null, "9"),
-                React.createElement("span", null, "4"),
-                React.createElement("span", null, "1"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'b2' }, "0"),
-                React.createElement("span", null, "2"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'b3' }, "0"),
-                React.createElement("span", null, "5"),
-                React.createElement("span", null, "3")),
-            React.createElement("div", { className: 'sudoku-subboard' },
-                React.createElement("span", null, "7"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'c1' }, "0"),
-                React.createElement("span", null, "5"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'c2' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'c3' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'c4' }, "0"),
-                React.createElement("span", null, "1"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'c5' }, "0"),
-                React.createElement("span", null, "8")),
-            React.createElement("div", { className: 'sudoku-subboard' },
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'd1' }, "0"),
-                React.createElement("span", null, "8"),
-                React.createElement("span", null, "1"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'd2' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'd3' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'd4' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'd5' }, "0"),
-                React.createElement("span", null, "5"),
-                React.createElement("span", null, "6")),
-            React.createElement("div", { className: 'sudoku-subboard' },
-                React.createElement("span", null, "5"),
-                React.createElement("span", null, "6"),
-                React.createElement("span", null, "7"),
-                React.createElement("span", null, "8"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'e1' }, "0"),
-                React.createElement("span", null, "1"),
-                React.createElement("span", null, "4"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'e2' }, "0"),
-                React.createElement("span", null, "9")),
-            React.createElement("div", { className: 'sudoku-subboard' },
-                React.createElement("span", null, "3"),
-                React.createElement("span", null, "4"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'f1' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'f2' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'f3' }, "0"),
-                React.createElement("span", null, "7"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'f4' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'f5' }, "0"),
-                React.createElement("span", null, "2")),
-            React.createElement("div", { className: 'sudoku-subboard' },
-                React.createElement("span", null, "4"),
-                React.createElement("span", null, "6"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'g1' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'g2' }, "0"),
-                React.createElement("span", null, "3"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'g3' }, "0"),
-                React.createElement("span", null, "9"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'g4' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'g5' }, "0")),
-            React.createElement("div", { className: 'sudoku-subboard' },
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'h1' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'h2' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'h3' }, "0"),
-                React.createElement("span", null, "9"),
-                React.createElement("span", null, "1"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'h4' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'h5' }, "0"),
-                React.createElement("span", null, "4"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'h6' }, "0")),
-            React.createElement("div", { className: 'sudoku-subboard' },
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'i1' }, "0"),
-                React.createElement("span", null, "9"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'i2' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'i3' }, "0"),
-                React.createElement("span", null, "7"),
-                React.createElement("span", null, "6"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'i4' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'i5' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'i6' }, "0"))),
-        React.createElement("div", { className: 'winning-container', style: { backgroundImage: `url(${lol_webp_1.default})` } },
-            React.createElement("div", null),
-            React.createElement("h1", null, "You Won!"),
-            React.createElement(react_router_dom_1.NavLink, { activeClassName: 'active', to: '/p3' },
-                React.createElement("h2", { className: 'arrows' }, "Play Another? \u27A1")),
-            React.createElement("div", null))));
+    return (react_1.default.createElement("div", { className: 'main-container' },
+        react_1.default.createElement("div", { className: 'nav' },
+            react_1.default.createElement(react_router_dom_1.NavLink, { activeClassName: 'active', to: '/' },
+                react_1.default.createElement("span", { className: 'arrows' }, "\u2B05")),
+            react_1.default.createElement("h1", null,
+                react_1.default.createElement("a", { href: sol2_webp_1.default, target: '_blank', title: 'Solution' }, "Puzzle #2")),
+            react_1.default.createElement(react_router_dom_1.NavLink, { activeClassName: 'active', to: '/p3' },
+                react_1.default.createElement("span", { className: 'arrows' }, "\u27A1"))),
+        react_1.default.createElement("div", { className: 'sudoku-board' },
+            react_1.default.createElement("div", { className: 'sudoku-subboard' },
+                react_1.default.createElement("span", null, "1"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), onScroll: ev => Increment(ev.target), id: 'a1' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'a2' }, "0"),
+                react_1.default.createElement("span", null, "5"),
+                react_1.default.createElement("span", null, "7"),
+                react_1.default.createElement("span", null, "3"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'a3' }, "0"),
+                react_1.default.createElement("span", null, "4"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'a4' }, "0")),
+            react_1.default.createElement("div", { className: 'sudoku-subboard' },
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'b1' }, "0"),
+                react_1.default.createElement("span", null, "9"),
+                react_1.default.createElement("span", null, "4"),
+                react_1.default.createElement("span", null, "1"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'b2' }, "0"),
+                react_1.default.createElement("span", null, "2"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'b3' }, "0"),
+                react_1.default.createElement("span", null, "5"),
+                react_1.default.createElement("span", null, "3")),
+            react_1.default.createElement("div", { className: 'sudoku-subboard' },
+                react_1.default.createElement("span", null, "7"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'c1' }, "0"),
+                react_1.default.createElement("span", null, "5"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'c2' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'c3' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'c4' }, "0"),
+                react_1.default.createElement("span", null, "1"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'c5' }, "0"),
+                react_1.default.createElement("span", null, "8")),
+            react_1.default.createElement("div", { className: 'sudoku-subboard' },
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'd1' }, "0"),
+                react_1.default.createElement("span", null, "8"),
+                react_1.default.createElement("span", null, "1"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'd2' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'd3' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'd4' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'd5' }, "0"),
+                react_1.default.createElement("span", null, "5"),
+                react_1.default.createElement("span", null, "6")),
+            react_1.default.createElement("div", { className: 'sudoku-subboard' },
+                react_1.default.createElement("span", null, "5"),
+                react_1.default.createElement("span", null, "6"),
+                react_1.default.createElement("span", null, "7"),
+                react_1.default.createElement("span", null, "8"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'e1' }, "0"),
+                react_1.default.createElement("span", null, "1"),
+                react_1.default.createElement("span", null, "4"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'e2' }, "0"),
+                react_1.default.createElement("span", null, "9")),
+            react_1.default.createElement("div", { className: 'sudoku-subboard' },
+                react_1.default.createElement("span", null, "3"),
+                react_1.default.createElement("span", null, "4"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'f1' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'f2' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'f3' }, "0"),
+                react_1.default.createElement("span", null, "7"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'f4' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'f5' }, "0"),
+                react_1.default.createElement("span", null, "2")),
+            react_1.default.createElement("div", { className: 'sudoku-subboard' },
+                react_1.default.createElement("span", null, "4"),
+                react_1.default.createElement("span", null, "6"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'g1' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'g2' }, "0"),
+                react_1.default.createElement("span", null, "3"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'g3' }, "0"),
+                react_1.default.createElement("span", null, "9"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'g4' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'g5' }, "0")),
+            react_1.default.createElement("div", { className: 'sudoku-subboard' },
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'h1' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'h2' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'h3' }, "0"),
+                react_1.default.createElement("span", null, "9"),
+                react_1.default.createElement("span", null, "1"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'h4' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'h5' }, "0"),
+                react_1.default.createElement("span", null, "4"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'h6' }, "0")),
+            react_1.default.createElement("div", { className: 'sudoku-subboard' },
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'i1' }, "0"),
+                react_1.default.createElement("span", null, "9"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'i2' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'i3' }, "0"),
+                react_1.default.createElement("span", null, "7"),
+                react_1.default.createElement("span", null, "6"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'i4' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'i5' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'i6' }, "0"))),
+        react_1.default.createElement("div", { className: 'winning-container', style: { backgroundImage: `url(${lol_webp_1.default})` } },
+            react_1.default.createElement("div", null),
+            react_1.default.createElement("h1", null, "You Won!"),
+            react_1.default.createElement(react_router_dom_1.NavLink, { activeClassName: 'active', to: '/p3' },
+                react_1.default.createElement("h2", { className: 'arrows' }, "Play Another? \u27A1")),
+            react_1.default.createElement("div", null))));
 };
 exports.default = Puzzle2;
 
@@ -4050,30 +4011,11 @@ exports.default = Puzzle2;
 
 "use strict";
 
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const React = __importStar(__webpack_require__(294));
+const react_1 = __importDefault(__webpack_require__(294));
 const react_router_dom_1 = __webpack_require__(427);
 const sol3_webp_1 = __importDefault(__webpack_require__(460));
 //this is puzzle #3 from https://www.printablesudoku99.com/pdf/EasySudoku001.pdf
@@ -4150,111 +4092,111 @@ const Puzzle3 = () => {
             schlepper.style.display = 'grid';
         }
     };
-    return (React.createElement("div", { className: 'main-container' },
-        React.createElement("div", { className: 'nav' },
-            React.createElement(react_router_dom_1.NavLink, { activeClassName: 'active', to: '/p2' },
-                React.createElement("span", { className: 'arrows' }, "\u2B05")),
-            React.createElement("h1", null,
-                React.createElement("a", { href: sol3_webp_1.default, target: '_blank', title: 'Solution' }, "Puzzle #3")),
-            React.createElement(react_router_dom_1.NavLink, { activeClassName: 'active', to: '/p4' },
-                React.createElement("span", { className: 'arrows' }, "\u27A1"))),
-        React.createElement("div", { className: 'sudoku-board' },
-            React.createElement("div", { className: 'sudoku-subboard' },
-                React.createElement("span", null, "4"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'a1' }, "0"),
-                React.createElement("span", null, "7"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'a2' }, "0"),
-                React.createElement("span", null, "9"),
-                React.createElement("span", null, "8"),
-                React.createElement("span", null, "6"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'a3' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'a4' }, "0")),
-            React.createElement("div", { className: 'sudoku-subboard' },
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'b1' }, "0"),
-                React.createElement("span", null, "9"),
-                React.createElement("span", null, "1"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'b2' }, "0"),
-                React.createElement("span", null, "4"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'b3' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'b4' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'b5' }, "0"),
-                React.createElement("span", null, "5")),
-            React.createElement("div", { className: 'sudoku-subboard' },
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'c1' }, "0"),
-                React.createElement("span", null, "2"),
-                React.createElement("span", null, "8"),
-                React.createElement("span", null, "5"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'c2' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'c3' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'c4' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'c5' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'c6' }, "0")),
-            React.createElement("div", { className: 'sudoku-subboard' },
-                React.createElement("span", null, "9"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'd1' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'd2' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'd3' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'd4' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'd5' }, "0"),
-                React.createElement("span", null, "7"),
-                React.createElement("span", null, "2"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'd6' }, "0")),
-            React.createElement("div", { className: 'sudoku-subboard' },
-                React.createElement("span", null, "8"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'e1' }, "0"),
-                React.createElement("span", null, "2"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'e2' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'e3' }, "0"),
-                React.createElement("span", null, "6"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'e4' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'e5' }, "0"),
-                React.createElement("span", null, "4")),
-            React.createElement("div", { className: 'sudoku-subboard' },
-                React.createElement("span", null, "1"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'f1' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'f2' }, "0"),
-                React.createElement("span", null, "2"),
-                React.createElement("span", null, "4"),
-                React.createElement("span", null, "3"),
-                React.createElement("span", null, "9"),
-                React.createElement("span", null, "8"),
-                React.createElement("span", null, "6")),
-            React.createElement("div", { className: 'sudoku-subboard' },
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'g1' }, "0"),
-                React.createElement("span", null, "1"),
-                React.createElement("span", null, "4"),
-                React.createElement("span", null, "5"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'g2' }, "0"),
-                React.createElement("span", null, "2"),
-                React.createElement("span", null, "8"),
-                React.createElement("span", null, "7"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'g3' }, "0")),
-            React.createElement("div", { className: 'sudoku-subboard' },
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'h1' }, "0"),
-                React.createElement("span", null, "6"),
-                React.createElement("span", null, "8"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'h2' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'h3' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'h4' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'h5' }, "0"),
-                React.createElement("span", null, "2"),
-                React.createElement("span", null, "3")),
-            React.createElement("div", { className: 'sudoku-subboard' },
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'i1' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'i2' }, "0"),
-                React.createElement("span", null, "2"),
-                React.createElement("span", null, "8"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'i3' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'i4' }, "0"),
-                React.createElement("span", null, "6"),
-                React.createElement("span", null, "1"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'i5' }, "0"))),
-        React.createElement("div", { className: 'winning-container', style: { backgroundImage: `url(${lol_webp_1.default})` } },
-            React.createElement("div", null),
-            React.createElement("h1", null, "You Won!"),
-            React.createElement(react_router_dom_1.NavLink, { activeClassName: 'active', to: '/p4' },
-                React.createElement("h2", { className: 'arrows' }, "Play Another? \u27A1")),
-            React.createElement("div", null))));
+    return (react_1.default.createElement("div", { className: 'main-container' },
+        react_1.default.createElement("div", { className: 'nav' },
+            react_1.default.createElement(react_router_dom_1.NavLink, { activeClassName: 'active', to: '/p2' },
+                react_1.default.createElement("span", { className: 'arrows' }, "\u2B05")),
+            react_1.default.createElement("h1", null,
+                react_1.default.createElement("a", { href: sol3_webp_1.default, target: '_blank', title: 'Solution' }, "Puzzle #3")),
+            react_1.default.createElement(react_router_dom_1.NavLink, { activeClassName: 'active', to: '/p4' },
+                react_1.default.createElement("span", { className: 'arrows' }, "\u27A1"))),
+        react_1.default.createElement("div", { className: 'sudoku-board' },
+            react_1.default.createElement("div", { className: 'sudoku-subboard' },
+                react_1.default.createElement("span", null, "4"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'a1' }, "0"),
+                react_1.default.createElement("span", null, "7"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'a2' }, "0"),
+                react_1.default.createElement("span", null, "9"),
+                react_1.default.createElement("span", null, "8"),
+                react_1.default.createElement("span", null, "6"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'a3' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'a4' }, "0")),
+            react_1.default.createElement("div", { className: 'sudoku-subboard' },
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'b1' }, "0"),
+                react_1.default.createElement("span", null, "9"),
+                react_1.default.createElement("span", null, "1"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'b2' }, "0"),
+                react_1.default.createElement("span", null, "4"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'b3' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'b4' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'b5' }, "0"),
+                react_1.default.createElement("span", null, "5")),
+            react_1.default.createElement("div", { className: 'sudoku-subboard' },
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'c1' }, "0"),
+                react_1.default.createElement("span", null, "2"),
+                react_1.default.createElement("span", null, "8"),
+                react_1.default.createElement("span", null, "5"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'c2' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'c3' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'c4' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'c5' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'c6' }, "0")),
+            react_1.default.createElement("div", { className: 'sudoku-subboard' },
+                react_1.default.createElement("span", null, "9"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'd1' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'd2' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'd3' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'd4' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'd5' }, "0"),
+                react_1.default.createElement("span", null, "7"),
+                react_1.default.createElement("span", null, "2"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'd6' }, "0")),
+            react_1.default.createElement("div", { className: 'sudoku-subboard' },
+                react_1.default.createElement("span", null, "8"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'e1' }, "0"),
+                react_1.default.createElement("span", null, "2"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'e2' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'e3' }, "0"),
+                react_1.default.createElement("span", null, "6"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'e4' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'e5' }, "0"),
+                react_1.default.createElement("span", null, "4")),
+            react_1.default.createElement("div", { className: 'sudoku-subboard' },
+                react_1.default.createElement("span", null, "1"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'f1' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'f2' }, "0"),
+                react_1.default.createElement("span", null, "2"),
+                react_1.default.createElement("span", null, "4"),
+                react_1.default.createElement("span", null, "3"),
+                react_1.default.createElement("span", null, "9"),
+                react_1.default.createElement("span", null, "8"),
+                react_1.default.createElement("span", null, "6")),
+            react_1.default.createElement("div", { className: 'sudoku-subboard' },
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'g1' }, "0"),
+                react_1.default.createElement("span", null, "1"),
+                react_1.default.createElement("span", null, "4"),
+                react_1.default.createElement("span", null, "5"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'g2' }, "0"),
+                react_1.default.createElement("span", null, "2"),
+                react_1.default.createElement("span", null, "8"),
+                react_1.default.createElement("span", null, "7"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'g3' }, "0")),
+            react_1.default.createElement("div", { className: 'sudoku-subboard' },
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'h1' }, "0"),
+                react_1.default.createElement("span", null, "6"),
+                react_1.default.createElement("span", null, "8"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'h2' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'h3' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'h4' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'h5' }, "0"),
+                react_1.default.createElement("span", null, "2"),
+                react_1.default.createElement("span", null, "3")),
+            react_1.default.createElement("div", { className: 'sudoku-subboard' },
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'i1' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'i2' }, "0"),
+                react_1.default.createElement("span", null, "2"),
+                react_1.default.createElement("span", null, "8"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'i3' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'i4' }, "0"),
+                react_1.default.createElement("span", null, "6"),
+                react_1.default.createElement("span", null, "1"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'i5' }, "0"))),
+        react_1.default.createElement("div", { className: 'winning-container', style: { backgroundImage: `url(${lol_webp_1.default})` } },
+            react_1.default.createElement("div", null),
+            react_1.default.createElement("h1", null, "You Won!"),
+            react_1.default.createElement(react_router_dom_1.NavLink, { activeClassName: 'active', to: '/p4' },
+                react_1.default.createElement("h2", { className: 'arrows' }, "Play Another? \u27A1")),
+            react_1.default.createElement("div", null))));
 };
 exports.default = Puzzle3;
 
@@ -4266,30 +4208,11 @@ exports.default = Puzzle3;
 
 "use strict";
 
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const React = __importStar(__webpack_require__(294));
+const react_1 = __importDefault(__webpack_require__(294));
 const react_router_dom_1 = __webpack_require__(427);
 const sol4_webp_1 = __importDefault(__webpack_require__(767));
 //this is puzzle #4 from https://www.printablesudoku99.com/pdf/EasySudoku001.pdf
@@ -4366,111 +4289,111 @@ const Puzzle4 = () => {
             schlepper.style.display = 'grid';
         }
     };
-    return (React.createElement("div", { className: 'main-container' },
-        React.createElement("div", { className: 'nav' },
-            React.createElement(react_router_dom_1.NavLink, { activeClassName: 'active', to: '/p3' },
-                React.createElement("span", { className: 'arrows' }, "\u2B05")),
-            React.createElement("h1", null,
-                React.createElement("a", { href: sol4_webp_1.default, target: '_blank', title: 'Solution' }, "Puzzle #4")),
-            React.createElement(react_router_dom_1.NavLink, { activeClassName: 'active', to: '/p5' },
-                React.createElement("span", { className: 'arrows' }, "\u27A1"))),
-        React.createElement("div", { className: 'sudoku-board' },
-            React.createElement("div", { className: 'sudoku-subboard' },
-                React.createElement("span", null, "5"),
-                React.createElement("span", null, "6"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'a1' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'a2' }, "0"),
-                React.createElement("span", null, "4"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'a3' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'a4' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'a5' }, "0"),
-                React.createElement("span", null, "1")),
-            React.createElement("div", { className: 'sudoku-subboard' },
-                React.createElement("span", null, "4"),
-                React.createElement("span", null, "9"),
-                React.createElement("span", null, "8"),
-                React.createElement("span", null, "1"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'b1' }, "0"),
-                React.createElement("span", null, "2"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'b2' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'b3' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'b4' }, "0")),
-            React.createElement("div", { className: 'sudoku-subboard' },
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'c1' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'c2' }, "0"),
-                React.createElement("span", null, "2"),
-                React.createElement("span", null, "6"),
-                React.createElement("span", null, "5"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'c3' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'c4' }, "0"),
-                React.createElement("span", null, "8"),
-                React.createElement("span", null, "4")),
-            React.createElement("div", { className: 'sudoku-subboard' },
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'd1' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'd2' }, "0"),
-                React.createElement("span", null, "4"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'd3' }, "0"),
-                React.createElement("span", null, "2"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'd4' }, "0"),
-                React.createElement("span", null, "8"),
-                React.createElement("span", null, "9"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'd5' }, "0")),
-            React.createElement("div", { className: 'sudoku-subboard' },
-                React.createElement("span", null, "6"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'e1' }, "0"),
-                React.createElement("span", null, "9"),
-                React.createElement("span", null, "3"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'e2' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'e3' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'e4' }, "0"),
-                React.createElement("span", null, "1"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'e5' }, "0")),
-            React.createElement("div", { className: 'sudoku-subboard' },
-                React.createElement("span", null, "2"),
-                React.createElement("span", null, "1"),
-                React.createElement("span", null, "5"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'f1' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'f2' }, "0"),
-                React.createElement("span", null, "8"),
-                React.createElement("span", null, "3"),
-                React.createElement("span", null, "4"),
-                React.createElement("span", null, "6")),
-            React.createElement("div", { className: 'sudoku-subboard' },
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'g1' }, "0"),
-                React.createElement("span", null, "8"),
-                React.createElement("span", null, "3"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'g2' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'g3' }, "0"),
-                React.createElement("span", null, "2"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'g4' }, "0"),
-                React.createElement("span", null, "1"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'g5' }, "0")),
-            React.createElement("div", { className: 'sudoku-subboard' },
-                React.createElement("span", null, "7"),
-                React.createElement("span", null, "5"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'h1' }, "0"),
-                React.createElement("span", null, "9"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'h2' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'h3' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'h4' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'h5' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'h6' }, "0")),
-            React.createElement("div", { className: 'sudoku-subboard' },
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'i1' }, "0"),
-                React.createElement("span", null, "2"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'i2' }, "0"),
-                React.createElement("span", null, "8"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'i3' }, "0"),
-                React.createElement("span", null, "1"),
-                React.createElement("span", null, "5"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'i4' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'i5' }, "0"))),
-        React.createElement("div", { className: 'winning-container', style: { backgroundImage: `url(${lol_webp_1.default})` } },
-            React.createElement("div", null),
-            React.createElement("h1", null, "You Won!"),
-            React.createElement(react_router_dom_1.NavLink, { activeClassName: 'active', to: '/p5' },
-                React.createElement("h2", { className: 'arrows' }, "Play Another? \u27A1")),
-            React.createElement("div", null))));
+    return (react_1.default.createElement("div", { className: 'main-container' },
+        react_1.default.createElement("div", { className: 'nav' },
+            react_1.default.createElement(react_router_dom_1.NavLink, { activeClassName: 'active', to: '/p3' },
+                react_1.default.createElement("span", { className: 'arrows' }, "\u2B05")),
+            react_1.default.createElement("h1", null,
+                react_1.default.createElement("a", { href: sol4_webp_1.default, target: '_blank', title: 'Solution' }, "Puzzle #4")),
+            react_1.default.createElement(react_router_dom_1.NavLink, { activeClassName: 'active', to: '/p5' },
+                react_1.default.createElement("span", { className: 'arrows' }, "\u27A1"))),
+        react_1.default.createElement("div", { className: 'sudoku-board' },
+            react_1.default.createElement("div", { className: 'sudoku-subboard' },
+                react_1.default.createElement("span", null, "5"),
+                react_1.default.createElement("span", null, "6"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'a1' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'a2' }, "0"),
+                react_1.default.createElement("span", null, "4"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'a3' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'a4' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'a5' }, "0"),
+                react_1.default.createElement("span", null, "1")),
+            react_1.default.createElement("div", { className: 'sudoku-subboard' },
+                react_1.default.createElement("span", null, "4"),
+                react_1.default.createElement("span", null, "9"),
+                react_1.default.createElement("span", null, "8"),
+                react_1.default.createElement("span", null, "1"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'b1' }, "0"),
+                react_1.default.createElement("span", null, "2"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'b2' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'b3' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'b4' }, "0")),
+            react_1.default.createElement("div", { className: 'sudoku-subboard' },
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'c1' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'c2' }, "0"),
+                react_1.default.createElement("span", null, "2"),
+                react_1.default.createElement("span", null, "6"),
+                react_1.default.createElement("span", null, "5"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'c3' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'c4' }, "0"),
+                react_1.default.createElement("span", null, "8"),
+                react_1.default.createElement("span", null, "4")),
+            react_1.default.createElement("div", { className: 'sudoku-subboard' },
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'd1' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'd2' }, "0"),
+                react_1.default.createElement("span", null, "4"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'd3' }, "0"),
+                react_1.default.createElement("span", null, "2"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'd4' }, "0"),
+                react_1.default.createElement("span", null, "8"),
+                react_1.default.createElement("span", null, "9"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'd5' }, "0")),
+            react_1.default.createElement("div", { className: 'sudoku-subboard' },
+                react_1.default.createElement("span", null, "6"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'e1' }, "0"),
+                react_1.default.createElement("span", null, "9"),
+                react_1.default.createElement("span", null, "3"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'e2' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'e3' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'e4' }, "0"),
+                react_1.default.createElement("span", null, "1"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'e5' }, "0")),
+            react_1.default.createElement("div", { className: 'sudoku-subboard' },
+                react_1.default.createElement("span", null, "2"),
+                react_1.default.createElement("span", null, "1"),
+                react_1.default.createElement("span", null, "5"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'f1' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'f2' }, "0"),
+                react_1.default.createElement("span", null, "8"),
+                react_1.default.createElement("span", null, "3"),
+                react_1.default.createElement("span", null, "4"),
+                react_1.default.createElement("span", null, "6")),
+            react_1.default.createElement("div", { className: 'sudoku-subboard' },
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'g1' }, "0"),
+                react_1.default.createElement("span", null, "8"),
+                react_1.default.createElement("span", null, "3"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'g2' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'g3' }, "0"),
+                react_1.default.createElement("span", null, "2"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'g4' }, "0"),
+                react_1.default.createElement("span", null, "1"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'g5' }, "0")),
+            react_1.default.createElement("div", { className: 'sudoku-subboard' },
+                react_1.default.createElement("span", null, "7"),
+                react_1.default.createElement("span", null, "5"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'h1' }, "0"),
+                react_1.default.createElement("span", null, "9"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'h2' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'h3' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'h4' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'h5' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'h6' }, "0")),
+            react_1.default.createElement("div", { className: 'sudoku-subboard' },
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'i1' }, "0"),
+                react_1.default.createElement("span", null, "2"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'i2' }, "0"),
+                react_1.default.createElement("span", null, "8"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'i3' }, "0"),
+                react_1.default.createElement("span", null, "1"),
+                react_1.default.createElement("span", null, "5"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'i4' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'i5' }, "0"))),
+        react_1.default.createElement("div", { className: 'winning-container', style: { backgroundImage: `url(${lol_webp_1.default})` } },
+            react_1.default.createElement("div", null),
+            react_1.default.createElement("h1", null, "You Won!"),
+            react_1.default.createElement(react_router_dom_1.NavLink, { activeClassName: 'active', to: '/p5' },
+                react_1.default.createElement("h2", { className: 'arrows' }, "Play Another? \u27A1")),
+            react_1.default.createElement("div", null))));
 };
 exports.default = Puzzle4;
 
@@ -4482,30 +4405,11 @@ exports.default = Puzzle4;
 
 "use strict";
 
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const React = __importStar(__webpack_require__(294));
+const react_1 = __importDefault(__webpack_require__(294));
 const react_router_dom_1 = __webpack_require__(427);
 const sol5_webp_1 = __importDefault(__webpack_require__(522));
 //this is puzzle #5 from https://www.printablesudoku99.com/pdf/EasySudoku001.pdf
@@ -4581,111 +4485,111 @@ const Puzzle5 = () => {
             schlepper.style.display = 'grid';
         }
     };
-    return (React.createElement("div", { className: 'main-container' },
-        React.createElement("div", { className: 'nav' },
-            React.createElement(react_router_dom_1.NavLink, { activeClassName: 'active', to: '/p4' },
-                React.createElement("span", { className: 'arrows' }, "\u2B05")),
-            React.createElement("h1", null,
-                React.createElement("a", { href: sol5_webp_1.default, target: '_blank', title: 'Solution' }, "Puzzle #5")),
-            React.createElement(react_router_dom_1.NavLink, { activeClassName: 'active', to: '/' },
-                React.createElement("span", { className: 'arrows' }, "\u27A1"))),
-        React.createElement("div", { className: 'sudoku-board' },
-            React.createElement("div", { className: 'sudoku-subboard' },
-                React.createElement("span", null, "8"),
-                React.createElement("span", null, "1"),
-                React.createElement("span", null, "4"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'a1' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'a2' }, "0"),
-                React.createElement("span", null, "2"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'a3' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'a4' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'a5' }, "0")),
-            React.createElement("div", { className: 'sudoku-subboard' },
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'b1' }, "0"),
-                React.createElement("span", null, "7"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'b2' }, "0"),
-                React.createElement("span", null, "1"),
-                React.createElement("span", null, "6"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'b3' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'b4' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'b5' }, "0"),
-                React.createElement("span", null, "5")),
-            React.createElement("div", { className: 'sudoku-subboard' },
-                React.createElement("span", null, "6"),
-                React.createElement("span", null, "9"),
-                React.createElement("span", null, "5"),
-                React.createElement("span", null, "3"),
-                React.createElement("span", null, "7"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'c1' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'c2' }, "0"),
-                React.createElement("span", null, "1"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'c3' }, "0")),
-            React.createElement("div", { className: 'sudoku-subboard' },
-                React.createElement("span", null, "1"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'd1' }, "0"),
-                React.createElement("span", null, "5"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'd2' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'd3' }, "0"),
-                React.createElement("span", null, "8"),
-                React.createElement("span", null, "9"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'd4' }, "0"),
-                React.createElement("span", null, "3")),
-            React.createElement("div", { className: 'sudoku-subboard' },
-                React.createElement("span", null, "9"),
-                React.createElement("span", null, "3"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'e1' }, "0"),
-                React.createElement("span", null, "6"),
-                React.createElement("span", null, "2"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'e2' }, "0"),
-                React.createElement("span", null, "4"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'e3' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'e4' }, "0")),
-            React.createElement("div", { className: 'sudoku-subboard' },
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'f1' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'f2' }, "0"),
-                React.createElement("span", null, "4"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'f3' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'f4' }, "0"),
-                React.createElement("span", null, "3"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'f5' }, "0"),
-                React.createElement("span", null, "8"),
-                React.createElement("span", null, "6")),
-            React.createElement("div", { className: 'sudoku-subboard' },
-                React.createElement("span", null, "3"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'g1' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'g2' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'g3' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'g4' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'g5' }, "0"),
-                React.createElement("span", null, "7"),
-                React.createElement("span", null, "8"),
-                React.createElement("span", null, "6")),
-            React.createElement("div", { className: 'sudoku-subboard' },
-                React.createElement("span", null, "2"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'h1' }, "0"),
-                React.createElement("span", null, "9"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'h2' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'h3' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'h4' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'h5' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'h6' }, "0"),
-                React.createElement("span", null, "3")),
-            React.createElement("div", { className: 'sudoku-subboard' },
-                React.createElement("span", null, "5"),
-                React.createElement("span", null, "6"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'i1' }, "0"),
-                React.createElement("span", null, "8"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'i2' }, "0"),
-                React.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'i3' }, "0"),
-                React.createElement("span", null, "2"),
-                React.createElement("span", null, "4"),
-                React.createElement("span", null, "9"))),
-        React.createElement("div", { className: 'winning-container', style: { backgroundImage: `url(${lol_webp_1.default})` } },
-            React.createElement("div", null),
-            React.createElement("h1", null, "You Won!"),
-            React.createElement(react_router_dom_1.NavLink, { activeClassName: 'active', to: '/' },
-                React.createElement("h2", { className: 'arrows' }, "Play Another? \u27A1")),
-            React.createElement("div", null))));
+    return (react_1.default.createElement("div", { className: 'main-container' },
+        react_1.default.createElement("div", { className: 'nav' },
+            react_1.default.createElement(react_router_dom_1.NavLink, { activeClassName: 'active', to: '/p4' },
+                react_1.default.createElement("span", { className: 'arrows' }, "\u2B05")),
+            react_1.default.createElement("h1", null,
+                react_1.default.createElement("a", { href: sol5_webp_1.default, target: '_blank', title: 'Solution' }, "Puzzle #5")),
+            react_1.default.createElement(react_router_dom_1.NavLink, { activeClassName: 'active', to: '/' },
+                react_1.default.createElement("span", { className: 'arrows' }, "\u27A1"))),
+        react_1.default.createElement("div", { className: 'sudoku-board' },
+            react_1.default.createElement("div", { className: 'sudoku-subboard' },
+                react_1.default.createElement("span", null, "8"),
+                react_1.default.createElement("span", null, "1"),
+                react_1.default.createElement("span", null, "4"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'a1' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'a2' }, "0"),
+                react_1.default.createElement("span", null, "2"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'a3' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'a4' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'a5' }, "0")),
+            react_1.default.createElement("div", { className: 'sudoku-subboard' },
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'b1' }, "0"),
+                react_1.default.createElement("span", null, "7"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'b2' }, "0"),
+                react_1.default.createElement("span", null, "1"),
+                react_1.default.createElement("span", null, "6"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'b3' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'b4' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'b5' }, "0"),
+                react_1.default.createElement("span", null, "5")),
+            react_1.default.createElement("div", { className: 'sudoku-subboard' },
+                react_1.default.createElement("span", null, "6"),
+                react_1.default.createElement("span", null, "9"),
+                react_1.default.createElement("span", null, "5"),
+                react_1.default.createElement("span", null, "3"),
+                react_1.default.createElement("span", null, "7"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'c1' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'c2' }, "0"),
+                react_1.default.createElement("span", null, "1"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'c3' }, "0")),
+            react_1.default.createElement("div", { className: 'sudoku-subboard' },
+                react_1.default.createElement("span", null, "1"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'd1' }, "0"),
+                react_1.default.createElement("span", null, "5"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'd2' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'd3' }, "0"),
+                react_1.default.createElement("span", null, "8"),
+                react_1.default.createElement("span", null, "9"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'd4' }, "0"),
+                react_1.default.createElement("span", null, "3")),
+            react_1.default.createElement("div", { className: 'sudoku-subboard' },
+                react_1.default.createElement("span", null, "9"),
+                react_1.default.createElement("span", null, "3"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'e1' }, "0"),
+                react_1.default.createElement("span", null, "6"),
+                react_1.default.createElement("span", null, "2"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'e2' }, "0"),
+                react_1.default.createElement("span", null, "4"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'e3' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'e4' }, "0")),
+            react_1.default.createElement("div", { className: 'sudoku-subboard' },
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'f1' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'f2' }, "0"),
+                react_1.default.createElement("span", null, "4"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'f3' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'f4' }, "0"),
+                react_1.default.createElement("span", null, "3"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'f5' }, "0"),
+                react_1.default.createElement("span", null, "8"),
+                react_1.default.createElement("span", null, "6")),
+            react_1.default.createElement("div", { className: 'sudoku-subboard' },
+                react_1.default.createElement("span", null, "3"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'g1' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'g2' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'g3' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'g4' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'g5' }, "0"),
+                react_1.default.createElement("span", null, "7"),
+                react_1.default.createElement("span", null, "8"),
+                react_1.default.createElement("span", null, "6")),
+            react_1.default.createElement("div", { className: 'sudoku-subboard' },
+                react_1.default.createElement("span", null, "2"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'h1' }, "0"),
+                react_1.default.createElement("span", null, "9"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'h2' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'h3' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'h4' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'h5' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'h6' }, "0"),
+                react_1.default.createElement("span", null, "3")),
+            react_1.default.createElement("div", { className: 'sudoku-subboard' },
+                react_1.default.createElement("span", null, "5"),
+                react_1.default.createElement("span", null, "6"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'i1' }, "0"),
+                react_1.default.createElement("span", null, "8"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'i2' }, "0"),
+                react_1.default.createElement("span", { className: 'hoverable', style: { color: 'rgba(0,0,0,0)' }, onClick: ev => Increment(ev.target), id: 'i3' }, "0"),
+                react_1.default.createElement("span", null, "2"),
+                react_1.default.createElement("span", null, "4"),
+                react_1.default.createElement("span", null, "9"))),
+        react_1.default.createElement("div", { className: 'winning-container', style: { backgroundImage: `url(${lol_webp_1.default})` } },
+            react_1.default.createElement("div", null),
+            react_1.default.createElement("h1", null, "You Won!"),
+            react_1.default.createElement(react_router_dom_1.NavLink, { activeClassName: 'active', to: '/' },
+                react_1.default.createElement("h2", { className: 'arrows' }, "Play Another? \u27A1")),
+            react_1.default.createElement("div", null))));
 };
 exports.default = Puzzle5;
 
@@ -4697,27 +4601,11 @@ exports.default = Puzzle5;
 
 "use strict";
 
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const React = __importStar(__webpack_require__(294));
+const react_1 = __importDefault(__webpack_require__(294));
 const Rightside = () => {
     //clicking the reset button will reset the cell values to 0 and make them transparent again
     const ResetPuzzle = () => {
@@ -4727,9 +4615,9 @@ const Rightside = () => {
             puzzle_array[i].innerHTML = '0';
         }
     };
-    return (React.createElement("div", { className: 'right-side' },
-        React.createElement("button", { onClick: () => ResetPuzzle() }, "Reset"),
-        React.createElement("a", { href: 'https://sudoku.com/how-to-play/sudoku-rules-for-complete-beginners/', target: '_blank' }, "How To Play")));
+    return (react_1.default.createElement("div", { className: 'right-side' },
+        react_1.default.createElement("button", { onClick: () => ResetPuzzle() }, "Reset"),
+        react_1.default.createElement("a", { href: 'https://sudoku.com/how-to-play/sudoku-rules-for-complete-beginners/', target: '_blank' }, "How To Play")));
 };
 exports.default = Rightside;
 
@@ -4741,34 +4629,16 @@ exports.default = Rightside;
 
 "use strict";
 
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const React = __importStar(__webpack_require__(294));
+const react_1 = __importDefault(__webpack_require__(294));
 const react_dom_1 = __webpack_require__(935);
 __webpack_require__(279);
 const App_1 = __importDefault(__webpack_require__(957));
-react_dom_1.render(React.createElement(App_1.default, null), document.querySelector('#root-container'));
+react_dom_1.render(react_1.default.createElement(react_1.default.StrictMode, null,
+    react_1.default.createElement(App_1.default, null)), document.getElementById('root'));
 
 
 /***/ })

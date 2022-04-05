@@ -1,13 +1,12 @@
-import * as React from 'react';
+import React from 'react';
 
 const Rightside: React.FC = () =>{
 
-    
     //clicking the reset button will reset the cell values to 0 and make them transparent again
-    const ResetPuzzle = () => {
+    const ResetPuzzle: () => void = () => {
         const puzzle_array: NodeListOf<HTMLElement> = document.querySelectorAll('.hoverable')
 
-        for (let i = 0; i < puzzle_array.length; i++){
+        for (let i: number = 0; i < puzzle_array.length; i++){
             puzzle_array[i].style.color = 'rgba(0,0,0,0)';
             puzzle_array[i].innerHTML = '0';
         } 

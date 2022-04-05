@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 import Solution from '../images/sol3.webp';
@@ -10,7 +10,7 @@ const Puzzle3: React.FC = () => {
     //this will cycle the clicked number between 0 and 9. if 0, it is hidden
     const Increment = (ev) => {
         ev.style.display = 'flex'
-        const current_number:number = Math.round(ev.innerHTML)
+        const current_number: number = Math.round(ev.innerHTML)
 
         ev.style.color = 'rgb(56, 174, 244)'
         ev.innerHTML = ((current_number + 1).toString())
@@ -27,7 +27,7 @@ const Puzzle3: React.FC = () => {
     }
 
     //this will check if the input numbers match the final solution.
-    const DidYaWinSon = () =>{
+    const DidYaWinSon: () => void = () =>{
         const a1:string = document.getElementById('a1').innerHTML
         const a2:string = document.getElementById('a2').innerHTML
         const a3:string = document.getElementById('a3').innerHTML
