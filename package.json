@@ -2,12 +2,10 @@
   "name": "sudoku",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "build": "webpack",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack"
   },
-  "author": "",
+  "author": "Stevie Wonder",
   "license": "ISC",
   "dependencies": {
     "react": "^17.0.2",
