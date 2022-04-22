@@ -3637,6 +3637,9 @@ const Puzzle1 = () => {
             ev.innerHTML = 0;
             ev.style.color = 'rgba(0,0,0,0)';
         }
+        //updating local storage with the new number in that cell.
+        const clickedCellText = document.getElementById(`${ev.id}`).innerHTML;
+        localStorage.setItem(`1${ev.id}`, clickedCellText);
         //lets check if we won...
         DidYaWinSon();
     };
@@ -3696,6 +3699,25 @@ const Puzzle1 = () => {
             schmekle.style.display = 'none';
             const schlepper = document.querySelector('.winning-container');
             schlepper.style.display = 'grid';
+        }
+    };
+    //load localstorage on puzzle load.
+    const puzzleOneArray = ["a1", "a2", "a3", "b1", "b2", "b3", "b4", "b5", "b6", "b7", "c1", 'c2', "c3", 'c4', 'd1', 'd2', 'd3', 'd4', 'd5', 'd6', 'e1', 'e2', 'e3', 'e4', 'e5', 'f1', 'f2', 'f3', 'g1', 'g2', 'g3', 'g4', 'h1', 'h2', 'h3', 'h4', 'i1', 'i2', 'i3', 'i4', 'i5'];
+    react_1.default.useEffect(() => {
+        setTimeout(() => {
+            GetLocalStorage();
+        }, 0);
+    }, []);
+    //getting localstorage variables for the puzzle cells.
+    //localstorage must not be null nor '0'.
+    const GetLocalStorage = () => {
+        for (let i = 0; i < puzzleOneArray.length; i++) {
+            if (localStorage.getItem(`1${puzzleOneArray[i]}`) !== ( false || '0')) {
+                let loadedCell = document.getElementById(`${puzzleOneArray[i]}`);
+                loadedCell.innerHTML = localStorage.getItem(`1${puzzleOneArray[i]}`);
+                loadedCell.style.display = 'flex';
+                loadedCell.style.color = 'rgb(56, 174, 244)';
+            }
         }
     };
     return (react_1.default.createElement("div", { className: 'main-container' },
@@ -3834,6 +3856,9 @@ const Puzzle2 = () => {
             ev.innerHTML = 0;
             ev.style.color = 'rgba(0,0,0,0)';
         }
+        //updating local storage with the new number in that cell.
+        const clickedCellText = document.getElementById(`${ev.id}`).innerHTML;
+        localStorage.setItem(`2${ev.id}`, clickedCellText);
         //lets check if we won...
         DidYaWinSon();
     };
@@ -3893,6 +3918,25 @@ const Puzzle2 = () => {
             schmekle.style.display = 'none';
             const schlepper = document.querySelector('.winning-container');
             schlepper.style.display = 'grid';
+        }
+    };
+    //load localstorage on puzzle load. 
+    const puzzleTwoArray = ["a1", "a2", "a3", "a4", "b1", "b2", "b3", "c1", 'c2', "c3", 'c4', 'c5', 'd1', 'd2', 'd3', 'd4', 'd5', 'e1', 'e2', 'f1', 'f2', 'f3', 'f4', 'f5', 'g1', 'g2', 'g3', 'g4', 'g5', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'i1', 'i2', 'i3', 'i4', 'i5', 'i6'];
+    react_1.default.useEffect(() => {
+        setTimeout(() => {
+            GetLocalStorage();
+        }, 0);
+    }, []);
+    //getting localstorage variables for the puzzle cells.
+    //localstorage must not be null nor '0'.
+    const GetLocalStorage = () => {
+        for (let i = 0; i < puzzleTwoArray.length; i++) {
+            if (localStorage.getItem(`2${puzzleTwoArray[i]}`) !== ( false || '0')) {
+                let loadedCell = document.getElementById(`${puzzleTwoArray[i]}`);
+                loadedCell.innerHTML = localStorage.getItem(`2${puzzleTwoArray[i]}`);
+                loadedCell.style.display = 'flex';
+                loadedCell.style.color = 'rgb(56, 174, 244)';
+            }
         }
     };
     return (react_1.default.createElement("div", { className: 'main-container' },
@@ -4031,6 +4075,9 @@ const Puzzle3 = () => {
             ev.innerHTML = 0;
             ev.style.color = 'rgba(0,0,0,0)';
         }
+        //updating local storage with the new number in that cell.
+        const clickedCellText = document.getElementById(`${ev.id}`).innerHTML;
+        localStorage.setItem(`3${ev.id}`, clickedCellText);
         //lets check if we won...
         DidYaWinSon();
     };
@@ -4090,6 +4137,24 @@ const Puzzle3 = () => {
             schmekle.style.display = 'none';
             const schlepper = document.querySelector('.winning-container');
             schlepper.style.display = 'grid';
+        }
+    };
+    const puzzleThreeArray = ["a1", "a2", "a3", "a4", "b1", "b2", "b3", "b4", "b5", "c1", 'c2', "c3", 'c4', 'c5', 'c6', 'd1', 'd2', 'd3', 'd4', 'd5', 'd6', 'e1', 'e2', 'e3', 'e4', 'e5', 'f1', 'f2', 'g1', 'g2', 'g3', 'h1', 'h2', 'h3', 'h4', 'h5', 'i1', 'i2', 'i3', 'i4', 'i5'];
+    react_1.default.useEffect(() => {
+        setTimeout(() => {
+            GetLocalStorage();
+        }, 0);
+    }, []);
+    //getting localstorage variables for the puzzle cells.
+    //localstorage must not be null nor '0'.
+    const GetLocalStorage = () => {
+        for (let i = 0; i < puzzleThreeArray.length; i++) {
+            if (localStorage.getItem(`3${puzzleThreeArray[i]}`) !== ( false || '0')) {
+                let loadedCell = document.getElementById(`${puzzleThreeArray[i]}`);
+                loadedCell.innerHTML = localStorage.getItem(`3${puzzleThreeArray[i]}`);
+                loadedCell.style.display = 'flex';
+                loadedCell.style.color = 'rgb(56, 174, 244)';
+            }
         }
     };
     return (react_1.default.createElement("div", { className: 'main-container' },
@@ -4226,8 +4291,11 @@ const Puzzle4 = () => {
         ev.innerHTML = ((current_number + 1).toString());
         if (current_number > 8) {
             ev.innerHTML = 0;
-            ev.style.color = 'rgb(56, 174, 244)';
+            ev.style.color = 'rgba(0,0,0,0)';
         }
+        //updating local storage with the new number in that cell.
+        const clickedCellText = document.getElementById(`${ev.id}`).innerHTML;
+        localStorage.setItem(`4${ev.id}`, clickedCellText);
         //lets check if we won...
         DidYaWinSon();
     };
@@ -4287,6 +4355,24 @@ const Puzzle4 = () => {
             schmekle.style.display = 'none';
             const schlepper = document.querySelector('.winning-container');
             schlepper.style.display = 'grid';
+        }
+    };
+    const puzzleFourArray = ["a1", "a2", "a3", "a4", "a5", "b1", "b2", "b3", "b4", "c1", 'c2', "c3", 'c4', 'd1', 'd2', 'd3', 'd4', 'd5', 'e1', 'e2', 'e3', 'e4', 'e5', 'f1', 'f2', 'g1', 'g2', 'g3', 'g4', 'g5', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'i1', 'i2', 'i3', 'i4', 'i5'];
+    react_1.default.useEffect(() => {
+        setTimeout(() => {
+            GetLocalStorage();
+        }, 0);
+    }, []);
+    //getting localstorage variables for the puzzle cells.
+    //localstorage must not read null nor '0'.
+    const GetLocalStorage = () => {
+        for (let i = 0; i < puzzleFourArray.length; i++) {
+            if (localStorage.getItem(`4${puzzleFourArray[i]}`) !== ( false || '0')) {
+                let loadedCell = document.getElementById(`${puzzleFourArray[i]}`);
+                loadedCell.innerHTML = localStorage.getItem(`4${puzzleFourArray[i]}`);
+                loadedCell.style.display = 'flex';
+                loadedCell.style.color = 'rgb(56, 174, 244)';
+            }
         }
     };
     return (react_1.default.createElement("div", { className: 'main-container' },
@@ -4425,6 +4511,9 @@ const Puzzle5 = () => {
             ev.innerHTML = 0;
             ev.style.color = 'rgba(0,0,0,0)';
         }
+        //updating local storage with the new number in that cell.
+        const clickedCellText = document.getElementById(`${ev.id}`).innerHTML;
+        localStorage.setItem(`5${ev.id}`, clickedCellText);
         //lets check if we won...
         DidYaWinSon();
     };
@@ -4483,6 +4572,24 @@ const Puzzle5 = () => {
             schmekle.style.display = 'none';
             const schlepper = document.querySelector('.winning-container');
             schlepper.style.display = 'grid';
+        }
+    };
+    const puzzleFiveArray = ["a1", "a2", "a3", "a4", "a5", "b1", "b2", "b3", "b4", "b5", "c1", 'c2', "c3", 'd1', 'd2', 'd3', 'd4', 'e1', 'e2', 'e3', 'e4', 'f1', 'f2', 'f3', 'f4', 'f5', 'g1', 'g2', 'g3', 'g4', 'g5', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'i1', 'i2', 'i3'];
+    react_1.default.useEffect(() => {
+        setTimeout(() => {
+            GetLocalStorage();
+        }, 0);
+    }, []);
+    //getting localstorage variables for the puzzle cells.
+    //localstorage must not read null nor '0'.
+    const GetLocalStorage = () => {
+        for (let i = 0; i < puzzleFiveArray.length; i++) {
+            if (localStorage.getItem(`5${puzzleFiveArray[i]}`) !== ( false || '0')) {
+                let loadedCell = document.getElementById(`${puzzleFiveArray[i]}`);
+                loadedCell.innerHTML = localStorage.getItem(`5${puzzleFiveArray[i]}`);
+                loadedCell.style.display = 'flex';
+                loadedCell.style.color = 'rgb(56, 174, 244)';
+            }
         }
     };
     return (react_1.default.createElement("div", { className: 'main-container' },
@@ -4611,6 +4718,7 @@ const Rightside = () => {
     const ResetPuzzle = () => {
         const puzzle_array = document.querySelectorAll('.hoverable');
         for (let i = 0; i < puzzle_array.length; i++) {
+            localStorage.clear();
             puzzle_array[i].style.color = 'rgba(0,0,0,0)';
             puzzle_array[i].innerHTML = '0';
         }

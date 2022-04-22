@@ -8,7 +8,7 @@ import WinningImage from '../images/lol.webp'
 const Puzzle1: React.FC = () => {
 
     //this will cycle the clicked number between 0 and 9. if 0, it is hidden
-    const Increment = (ev) => {
+    const Increment: (ev) => void = (ev) => {
         ev.style.display = 'flex'
         const current_number: number = Math.round(ev.innerHTML)
 
@@ -21,6 +21,10 @@ const Puzzle1: React.FC = () => {
 
             ev.style.color='rgba(0,0,0,0)'
         }
+
+        //updating local storage with the new number in that cell.
+        const clickedCellText: string = document.getElementById(`${ev.id}`).innerHTML
+        localStorage.setItem(`1${ev.id}`, clickedCellText);
 
         //lets check if we won...
         DidYaWinSon()
@@ -99,8 +103,30 @@ const Puzzle1: React.FC = () => {
     }
 
 
-    return(
+    //load localstorage on puzzle load.
+    const puzzleOneArray: string[] = ["a1","a2","a3","b1","b2","b3","b4","b5","b6","b7","c1",'c2',"c3",'c4','d1','d2','d3','d4','d5','d6','e1','e2','e3','e4','e5','f1','f2','f3','g1','g2','g3','g4','h1','h2','h3','h4','i1','i2','i3','i4','i5']
+    React.useEffect(() => {
+        setTimeout(() => {
+            GetLocalStorage()
+        }, 0);
+    },[])
 
+    //getting localstorage variables for the puzzle cells.
+    //localstorage must not be null nor '0'.
+    const GetLocalStorage: () => void = () => {
+        for (let i: number = 0; i < puzzleOneArray.length; i++){
+            if(localStorage.getItem(`1${puzzleOneArray[i]}`) !== (null || '0')){
+
+                let loadedCell: HTMLElement = document.getElementById(`${puzzleOneArray[i]}`)
+
+                loadedCell.innerHTML = localStorage.getItem(`1${puzzleOneArray[i]}`);
+
+                loadedCell.style.display = 'flex'
+                loadedCell.style.color = 'rgb(56, 174, 244)'
+            }
+        }
+    }
+    return(
     <div className='main-container'>
         <div className='nav'>
 

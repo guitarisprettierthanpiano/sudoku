@@ -7,6 +7,7 @@ const Rightside: React.FC = () =>{
         const puzzle_array: NodeListOf<HTMLElement> = document.querySelectorAll('.hoverable')
 
         for (let i: number = 0; i < puzzle_array.length; i++){
+            localStorage.clear();
             puzzle_array[i].style.color = 'rgba(0,0,0,0)';
             puzzle_array[i].innerHTML = '0';
         } 

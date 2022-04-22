@@ -22,6 +22,10 @@ const Puzzle2: React.FC = () => {
             ev.style.color='rgba(0,0,0,0)'
         }
 
+        //updating local storage with the new number in that cell.
+        const clickedCellText: string = document.getElementById(`${ev.id}`).innerHTML
+        localStorage.setItem(`2${ev.id}`, clickedCellText);
+
         //lets check if we won...
         DidYaWinSon()
     }
@@ -98,6 +102,29 @@ const Puzzle2: React.FC = () => {
         }
     }
 
+    //load localstorage on puzzle load. 
+    const puzzleTwoArray: string[] = ["a1","a2","a3","a4","b1","b2","b3","c1",'c2',"c3",'c4','c5','d1','d2','d3','d4','d5','e1','e2','f1','f2','f3','f4','f5','g1','g2','g3','g4','g5','h1','h2','h3','h4','h5','h6','i1','i2','i3','i4','i5','i6']
+    React.useEffect(() => {
+        setTimeout(() => {
+            GetLocalStorage()
+        }, 0);
+    },[])
+
+    //getting localstorage variables for the puzzle cells.
+    //localstorage must not be null nor '0'.
+    const GetLocalStorage: () => void = () => {
+        for (let i: number = 0; i < puzzleTwoArray.length; i++){
+            if(localStorage.getItem(`2${puzzleTwoArray[i]}`) !== (null || '0')){
+
+                let loadedCell: HTMLElement = document.getElementById(`${puzzleTwoArray[i]}`)
+
+                loadedCell.innerHTML = localStorage.getItem(`2${puzzleTwoArray[i]}`);
+
+                loadedCell.style.display = 'flex'
+                loadedCell.style.color = 'rgb(56, 174, 244)'
+            }
+        }
+    }
 
     return(
 
