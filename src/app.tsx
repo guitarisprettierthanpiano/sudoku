@@ -6,11 +6,9 @@ const Puzzle2: React.LazyExoticComponent<React.FC<{}>> = React.lazy(() => import
 const Puzzle3: React.LazyExoticComponent<React.FC<{}>> = React.lazy(() => import("./components/puzzle3"));
 const Puzzle4: React.LazyExoticComponent<React.FC<{}>> = React.lazy(() => import("./components/puzzle4"));
 const Puzzle5: React.LazyExoticComponent<React.FC<{}>> = React.lazy(() => import("./components/puzzle5"));
-
 import Rightside from './components/rightside';
 
 const App: React.FC = () => {
-
     React.useEffect(() => {
         //removing right click because it is annoying when accidently clicking it instead of left click.
         addEventListener("contextmenu", function (e) {

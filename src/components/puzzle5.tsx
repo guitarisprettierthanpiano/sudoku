@@ -5,7 +5,11 @@ import Solution from '../images/sol5.webp';
 //this is puzzle #5 from https://www.printablesudoku99.com/pdf/EasySudoku001.pdf
 import WinningImage from '../images/lol.webp'
 
+import { useAppDispatch } from '../app/hooks'
+import { decrement, increment, five } from '../features/puzzNumber/puzzNumberSlice'
+
 const Puzzle5: React.FC = () => {
+    const dispatch = useAppDispatch()
 
     //this will cycle the clicked number between 0 and 9. if 0, it is hidden
     const Increment = (ev) => {
@@ -106,6 +110,8 @@ const Puzzle5: React.FC = () => {
         setTimeout(() => {
             GetLocalStorage()
         }, 0);
+
+        dispatch(five())
     },[])
 
     //getting localstorage variables for the puzzle cells.
@@ -130,6 +136,7 @@ const Puzzle5: React.FC = () => {
 
         <NavLink
             activeClassName='active'
+            onClick={() => dispatch(decrement())}
             to='/p4'>
             <span className='arrows'>&#11013;</span>
         </NavLink>
@@ -138,6 +145,7 @@ const Puzzle5: React.FC = () => {
         
         <NavLink
             activeClassName='active'
+            onClick={() => dispatch(increment())}
             to='/'>
             <span className='arrows'>&#10145;</span>
         </NavLink>
@@ -371,8 +379,10 @@ const Puzzle5: React.FC = () => {
             <h1>You Won!</h1>
             <NavLink
             activeClassName='active'
+            onClick={() => dispatch(increment())}
             to='/'>
-                <h2 className='arrows'>
+                <h2 className='arrows'
+                onClick={() => dispatch(increment())}>
                     Play Another? &#10145;
                 </h2>
             </NavLink>
