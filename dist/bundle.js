@@ -7566,7 +7566,7 @@ if (true) {
 
 /***/ }),
 
-/***/ 957:
+/***/ 874:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -7651,7 +7651,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.store = void 0;
 const toolkit_1 = __webpack_require__(32);
-const puzzNumberSlice_1 = __importDefault(__webpack_require__(698));
+const puzzNumberSlice_1 = __importDefault(__webpack_require__(957));
 exports.store = toolkit_1.configureStore({
     reducer: {
         puzzleNumber: puzzNumberSlice_1.default
@@ -7676,7 +7676,7 @@ const sol1_webp_1 = __importDefault(__webpack_require__(685));
 //this is puzzle #1 from https://www.printablesudoku99.com/pdf/EasySudoku001.pdf
 const lol_webp_1 = __importDefault(__webpack_require__(674));
 const hooks_1 = __webpack_require__(435);
-const puzzNumberSlice_1 = __webpack_require__(698);
+const puzzNumberSlice_1 = __webpack_require__(957);
 const Puzzle1 = () => {
     const dispatch = hooks_1.useAppDispatch();
     //this will cycle the clicked number between 0 and 9. if 0, it is hidden
@@ -7899,7 +7899,7 @@ const sol2_webp_1 = __importDefault(__webpack_require__(445));
 //this is puzzle #2 from https://www.printablesudoku99.com/pdf/EasySudoku001.pdf
 const lol_webp_1 = __importDefault(__webpack_require__(674));
 const hooks_1 = __webpack_require__(435);
-const puzzNumberSlice_1 = __webpack_require__(698);
+const puzzNumberSlice_1 = __webpack_require__(957);
 const Puzzle2 = () => {
     const dispatch = hooks_1.useAppDispatch();
     //this will cycle the clicked number between 0 and 9. if 0, it is hidden
@@ -8122,7 +8122,7 @@ const sol3_webp_1 = __importDefault(__webpack_require__(460));
 //this is puzzle #3 from https://www.printablesudoku99.com/pdf/EasySudoku001.pdf
 const lol_webp_1 = __importDefault(__webpack_require__(674));
 const hooks_1 = __webpack_require__(435);
-const puzzNumberSlice_1 = __webpack_require__(698);
+const puzzNumberSlice_1 = __webpack_require__(957);
 const Puzzle3 = () => {
     const dispatch = hooks_1.useAppDispatch();
     //this will cycle the clicked number between 0 and 9. if 0, it is hidden
@@ -8344,7 +8344,7 @@ const sol4_webp_1 = __importDefault(__webpack_require__(767));
 //this is puzzle #4 from https://www.printablesudoku99.com/pdf/EasySudoku001.pdf
 const lol_webp_1 = __importDefault(__webpack_require__(674));
 const hooks_1 = __webpack_require__(435);
-const puzzNumberSlice_1 = __webpack_require__(698);
+const puzzNumberSlice_1 = __webpack_require__(957);
 const Puzzle4 = () => {
     const dispatch = hooks_1.useAppDispatch();
     //this will cycle the clicked number between 0 and 9. if 0, it is hidden
@@ -8566,7 +8566,7 @@ const sol5_webp_1 = __importDefault(__webpack_require__(522));
 //this is puzzle #5 from https://www.printablesudoku99.com/pdf/EasySudoku001.pdf
 const lol_webp_1 = __importDefault(__webpack_require__(674));
 const hooks_1 = __webpack_require__(435);
-const puzzNumberSlice_1 = __webpack_require__(698);
+const puzzNumberSlice_1 = __webpack_require__(957);
 const Puzzle5 = () => {
     const dispatch = hooks_1.useAppDispatch();
     //this will cycle the clicked number between 0 and 9. if 0, it is hidden
@@ -8787,17 +8787,16 @@ const Rightside = () => {
     const currentPuzzNumb = hooks_1.useAppSelector(state => state.puzzleNumber.value);
     //clicking the reset button will reset the cell values to 0 and make them transparent again
     const ResetPuzzle = () => {
-        const puzzle_array = document.querySelectorAll('.hoverable');
-        for (let i = 0; i < puzzle_array.length; i++) {
-            puzzle_array[i].style.color = 'rgba(0,0,0,0)';
-            puzzle_array[i].innerHTML = '0';
+        const cellArray = document.querySelectorAll('.hoverable');
+        for (let i = 0; i < cellArray.length; i++) {
+            cellArray[i].style.color = 'rgba(0,0,0,0)';
+            cellArray[i].innerHTML = '0';
         }
         //clearing local storage storing cell numbers. using redux to figure out which puzz# is open.
         for (let j = 1; j < 10; j++) {
             const alphabetArray = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i'];
             for (let k = 0; k < alphabetArray.length; k++) {
                 localStorage.removeItem(`${currentPuzzNumb}${alphabetArray[k]}${j}`);
-                console.log(`${currentPuzzNumb}${alphabetArray[k]}${j}`);
             }
         }
     };
@@ -8810,7 +8809,7 @@ exports.default = Rightside;
 
 /***/ }),
 
-/***/ 698:
+/***/ 957:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
@@ -8838,7 +8837,6 @@ exports.counterSlice = toolkit_1.createSlice({
             else {
                 state.value += 1;
             }
-            console.log(state.value);
         },
         decrement: state => {
             if (state.value === 1) {
@@ -8889,7 +8887,7 @@ const react_dom_1 = __webpack_require__(935);
 const react_redux_1 = __webpack_require__(706);
 const store_1 = __webpack_require__(419);
 __webpack_require__(279);
-const App_1 = __importDefault(__webpack_require__(957));
+const App_1 = __importDefault(__webpack_require__(874));
 react_dom_1.render(react_1.default.createElement(react_1.default.StrictMode, null,
     react_1.default.createElement(react_redux_1.Provider, { store: store_1.store },
         react_1.default.createElement(App_1.default, null))), document.getElementById('root'));

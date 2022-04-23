@@ -20,13 +20,20 @@ export const counterSlice = createSlice({
     // which detects changes to a "draft state" and produces a brand new
     // immutable state based off those changes
     increment: state => {
-      if(state.value === 5){state.value = 1}
-      else{state.value += 1}
-      console.log(state.value)
+      if(state.value === 5){
+        state.value = 1
+      }
+      else{
+        state.value += 1
+      }
     },
     decrement: state => {
-      if(state.value === 1){state.value = 5}
-      else{state.value -= 1}
+      if(state.value === 1){
+        state.value = 5
+      }
+      else{
+        state.value -= 1
+      }
 
     },
     one: state => {

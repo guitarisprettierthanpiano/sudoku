@@ -7,10 +7,10 @@ const Rightside: React.FC = () =>{
     //clicking the reset button will reset the cell values to 0 and make them transparent again
     const ResetPuzzle: () => void = () => {
 
-        const puzzle_array: NodeListOf<HTMLElement> = document.querySelectorAll('.hoverable')
-        for (let i: number = 0; i < puzzle_array.length; i++){
-            puzzle_array[i].style.color = 'rgba(0,0,0,0)';
-            puzzle_array[i].innerHTML = '0';
+        const cellArray: NodeListOf<HTMLElement> = document.querySelectorAll('.hoverable')
+        for (let i: number = 0; i < cellArray.length; i++){
+            cellArray[i].style.color = 'rgba(0,0,0,0)';
+            cellArray[i].innerHTML = '0';
         } 
 
         //clearing local storage storing cell numbers. using redux to figure out which puzz# is open.
@@ -18,7 +18,6 @@ const Rightside: React.FC = () =>{
             const alphabetArray: string[] = ['a','b','c','d','e','f','g','h','i']
             for (let k: number = 0; k < alphabetArray.length; k++){
                 localStorage.removeItem(`${currentPuzzNumb}${alphabetArray[k]}${j}`);
-                console.log(`${currentPuzzNumb}${alphabetArray[k]}${j}`)
             }
         }
     }
